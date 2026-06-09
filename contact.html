@@ -2,40 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mubarak Digital Solutions | Contact</title>
+    
+    <style>
+        /* MOBILE-FIRST RESPONSIVE OVERRIDES */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px !important; /* Drops tight margins on narrow mobile panels */
+            }
+            
+            /* Stacks the navigation elements cleanly so they don't break or overlap */
+            .nav-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 25px !important;
+            }
+            
+            .nav-link {
+                margin: 0 !important;
+                padding: 8px 12px !important;
+                font-size: 12px !important;
+            }
+            
+            /* Scales down headline font to fit small viewports perfectly */
+            .page-title {
+                font-size: 34px !important;
+                text-align: center;
+                margin-bottom: 15px !important;
+            }
+            
+            .page-subtitle {
+                text-align: center;
+                font-size: 14px !important;
+                margin-bottom: 25px !important;
+            }
+            
+            /* Clean structural cushion for the card details */
+            .contact-card {
+                padding: 25px 20px !important;
+            }
+            
+            .contact-item {
+                font-size: 15px !important;
+            }
+            
+            /* Wraps the footer vertically on phones */
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                margin-top: 30px !important;
+                padding: 15px 0 !important;
+            }
+        }
+    </style>
 </head>
-<body style="background: radial-gradient(circle, #0a1931 0%, #020713 100%); color: #ffffff; font-family: sans-serif; margin: 0; padding: 40px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; overflow-x: hidden;">
+<body style="background: radial-gradient(circle, #0a1931 0%, #020713 100%); color: #ffffff; font-family: sans-serif; margin: 0; padding: 40px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; overflow-x: hidden; box-sizing: border-box;">
 
     <div>
-        <!-- TOP NAVIGATION BAR -->
-        <div style="text-align: center; margin-bottom: 30px;">
-            <a href="index.html" style="color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">HOME</a>
-            <a href="about.html" style="color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">ABOUT ME</a>
-            <a href="service.html" style="color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">SERVICES</a>
-            <a href="projects.html" style="color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">PROJECTS</a>
-            <a href="review.html" style="color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">REVIEWS</a>
-            <a href="contact.html" style="color: #ffffff; background: #0066ff; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; border-radius: 5px; box-shadow: 0 0 10px #0066ff; font-size: 14px;">CONTACT</a>
+        <div class="nav-container" style="text-align: center; margin-bottom: 30px;">
+            <a href="index.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">HOME</a>
+            <a href="about.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">ABOUT ME</a>
+            <a href="service.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">SERVICES</a>
+            <a href="projects.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">PROJECTS</a>
+            <a href="review.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">REVIEWS</a>
+            <a href="contact.html" class="nav-link" style="display: inline-block; color: #ffffff; background: #0066ff; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; border-radius: 5px; box-shadow: 0 0 10px #0066ff; font-size: 14px;">CONTACT</a>
         </div>
 
-        <!-- MAIN LAYOUT CONTAINER (Expanded to Full Width) -->
-        <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
-            <h1 style="font-size: 55px; color: #4da3ff; margin: 0 0 10px 0; font-weight: bold; letter-spacing: -0.5px;">Get In Touch Today</h1>
-            <p style="color: #cbd5e1; font-size: 16px; margin: 0 0 30px 0; line-height: 1.5;">Let’s collaborate to elevate your brand layout and build an impactful online presence.</p>
+        <div style="max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+            <h1 class="page-title" style="font-size: 55px; color: #4da3ff; margin: 0 0 10px 0; font-weight: bold; letter-spacing: -0.5px;">Get In Touch Today</h1>
+            <p class="page-subtitle" style="color: #cbd5e1; font-size: 16px; margin: 0 0 30px 0; line-height: 1.5;">Let’s collaborate to elevate your brand layout and build an impactful online presence.</p>
             
-            <div style="background: rgba(2, 12, 38, 0.7); border: 2px solid rgba(0, 102, 255, 0.25); border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
-                <p style="font-size: 18px; margin: 15px 0; color: #ffffff;">📞 <strong style="color: #4da3ff;">WhatsApp / Call:</strong> 09036346292</p>
+            <div class="contact-card" style="background: rgba(2, 12, 38, 0.7); border: 2px solid rgba(0, 102, 255, 0.25); border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(8px); box-sizing: border-box;">
+                
+                <p class="contact-item" style="font-size: 18px; margin: 15px 0; color: #ffffff;">
+                    📞 <strong style="color: #4da3ff;">WhatsApp / Call:</strong> 
+                    <a href="https://wa.me/2349036346292" style="color: #ffffff; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4da3ff'" onmouseout="this.style.color='#ffffff'">09036346292</a>
+                </p>
                 <hr style="border: 0; border-top: 1px solid rgba(0, 102, 255, 0.2);">
-                <p style="font-size: 18px; margin: 15px 0; color: #ffffff;">🌐 <strong style="color: #4da3ff;">Facebook:</strong> MUBARAKADEBAYO</p>
+                
+                <p class="contact-item" style="font-size: 18px; margin: 15px 0; color: #ffffff;">
+                    🌐 <strong style="color: #4da3ff;">Facebook:</strong> 
+                    <a href="https://facebook.com/MUBARAKADEBAYO" target="_blank" style="color: #ffffff; text-decoration: none;" onmouseover="this.style.color='#4da3ff'" onmouseout="this.style.color='#ffffff'">MUBARAKADEBAYO</a>
+                </p>
                 <hr style="border: 0; border-top: 1px solid rgba(0, 102, 255, 0.2);">
-                <p style="font-size: 18px; margin: 15px 0; color: #ffffff;">📸 <strong style="color: #4da3ff;">Instagram:</strong> MUBARAKISMAHEEL</p>
+                
+                <p class="contact-item" style="font-size: 18px; margin: 15px 0; color: #ffffff;">
+                    📸 <strong style="color: #4da3ff;">Instagram:</strong> 
+                    <a href="https://instagram.com/MUBARAKISMAHEEL" target="_blank" style="color: #ffffff; text-decoration: none;" onmouseover="this.style.color='#4da3ff'" onmouseout="this.style.color='#ffffff'">MUBARAKISMAHEEL</a>
+                </p>
                 <hr style="border: 0; border-top: 1px solid rgba(0, 102, 255, 0.2);">
-                <p style="font-size: 18px; margin: 15px 0; color: #ffffff;">✉️ <strong style="color: #4da3ff;">Email:</strong> mubarakismahel67@gmail.com</p>
+                
+                <p class="contact-item" style="font-size: 18px; margin: 15px 0; color: #ffffff;">
+                    ✉️ <strong style="color: #4da3ff;">Email:</strong> 
+                    <a href="mailto:mubarakismahel67@gmail.com" style="color: #ffffff; text-decoration: none;" onmouseover="this.style.color='#4da3ff'" onmouseout="this.style.color='#ffffff'">mubarakismahel67@gmail.com</a>
+                </p>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER BRANDING -->
-    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; width: 100%; background: transparent;">
+    <div class="footer-container" style="border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; width: 100%; background: transparent; box-sizing: border-box;">
         <div>
             <h3 style="margin: 0; color: #ffffff; font-size: 16px; font-weight: bold;">Mubarak Digital Solutions</h3>
         </div>
