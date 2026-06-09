@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- CRITICAL FIX: Directs mobile rendering systems to display correct UI proportions -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mubarak Digital Solutions | Projects</title>
     
@@ -23,13 +22,15 @@
             border-radius: 10px;
             padding: 15px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Keeps titles balanced at the bottom */
         }
         
         .project-card img {
             width: 100%;
-            height: auto;
-            max-height: 450px;
-            object-fit: cover;
+            height: auto; /* Allows the image to scale naturally without truncation */
+            object-fit: contain; /* FIX: Guarantees the entire flyer displays in full without cropping */
             border-radius: 6px;
             border: 1px solid #334155;
         }
@@ -94,7 +95,6 @@
 <body style="background: radial-gradient(circle, #0a1931 0%, #020713 100%); color: #ffffff; font-family: sans-serif; margin: 0; padding: 40px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; overflow-x: hidden; box-sizing: border-box;">
 
     <div>
-        <!-- TOP NAVIGATION BAR -->
         <div class="nav-container" style="text-align: center; margin-bottom: 50px;">
             <a href="index.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">HOME</a>
             <a href="about.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">ABOUT ME</a>
@@ -104,24 +104,19 @@
             <a href="contact.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 10px; font-weight: bold; font-size: 14px;">CONTACT</a>
         </div>
 
-        <!-- MAIN LAYOUT CONTAINER -->
         <div style="max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;">
             <h1 class="page-title" style="font-size: 45px; color: #4da3ff; margin: 0 0 5px 0; font-weight: bold;">Our Design</h1>
             <p class="page-subtitle" style="font-size: 32px; margin: 0 0 25px 0; font-weight: bold;">Portfolio Case Studies</p>
             
-            <!-- Main Box Container -->
             <div class="main-box-container" style="background: rgba(2, 12, 38, 0.6); border: 2px solid rgba(0, 102, 255, 0.25); border-radius: 16px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); box-sizing: border-box;">
                 
-                <!-- CATEGORY 1: FLYERS & POSTERS -->
                 <h3 style="color: #4da3ff; border-bottom: 1px solid rgba(0, 102, 255, 0.3); padding-bottom: 5px; margin: 0 0 20px 0; font-size: 18px; letter-spacing: 1px;">FLYERS & POSTERS</h3>
                 
                 <div class="project-row">
-                    <!-- Need A Website Flyer -->
                     <div class="project-card">
                         <img src="6a01e50e3befb72315bae69382ef31d1_2.jpeg" alt="Need A Website Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Web Services</p>
                     </div>
-                    <!-- NexusLaunch Hub Promotional Flyer -->
                     <div class="project-card">
                         <img src="cc45920c803dc8a8706f6aaad1ffc089_2.jpeg" alt="NexusLaunch Hub Promotional Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">NexusLaunch Hub</p>
@@ -129,12 +124,10 @@
                 </div>
                 
                 <div class="project-row">
-                    <!-- Green Graphic Design Flyer -->
                     <div class="project-card">
                         <img src="7dd7c5773227b51757482fd1c073c3f6_1.jpeg" alt="Graphic Design Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Graphic Design</p>
                     </div>
-                    <!-- The Crumb Factory Bakery Flyer -->
                     <div class="project-card">
                         <img src="we are done her.png" alt="The Crumb Factory Grand Opening Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Grand Opening</p>
@@ -143,16 +136,13 @@
 
                 <div style="height: 25px;"></div>
 
-                <!-- CATEGORY 2: BRAND & CORPORATE IDENTITY -->
                 <h3 style="color: #4da3ff; border-bottom: 1px solid rgba(0, 102, 255, 0.3); padding-bottom: 5px; margin: 0 0 20px 0; font-size: 18px; letter-spacing: 1px;">BRAND & CORPORATE IDENTITY</h3>
                 
                 <div class="project-row">
-                    <!-- Graphic Design Hub Flyer -->
                     <div class="project-card">
                         <img src="7db5a0fe296875ab210ce3af159b7386_2.jpeg" alt="Graphic Design Hub Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Brand Identity</p>
                     </div>
-                    <!-- MDS Corporate Agency Banner -->
                     <div class="project-card">
                         <img src="file_00000000c22c71f48a457d9f7e6d0eb8.png" alt="Mubarak Digital Solutions Corporate Banner">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Agency Banner</p>
@@ -161,16 +151,13 @@
 
                 <div style="height: 25px;"></div>
 
-                <!-- CATEGORY 3: PRODUCT MENUS & CATALOGS -->
                 <h3 style="color: #4da3ff; border-bottom: 1px solid rgba(0, 102, 255, 0.3); padding-bottom: 5px; margin: 0 0 20px 0; font-size: 18px; letter-spacing: 1px;">PRODUCT MENUS & CATALOGS</h3>
                 
                 <div class="project-row">
-                    <!-- Jollus Mart Product Menu Card -->
                     <div class="project-card">
                         <img src="8ed0739cf50223658fa4ceac14f831d7_1.jpeg" alt="Jollus Mart Catalog">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Product Menu</p>
                     </div>
-                    <!-- Jollus Mart Full Feature Flyer -->
                     <div class="project-card">
                         <img src="Screenshot_20260605-104433.png" alt="Jollus Mart Full Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Full Inventory</p>
@@ -181,7 +168,6 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <div class="footer-container" style="margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; width: 100%; background: transparent; box-sizing: border-box;">
         <div>
             <h3 style="margin: 0; color: #ffffff; font-size: 16px; font-weight: bold;">Mubarak Digital Solutions</h3>
