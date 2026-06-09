@@ -6,17 +6,16 @@
     <title>Mubarak Digital Solutions | Projects</title>
     
     <style>
-        /* LUXURY LAYOUT DESIGN FOR THE PROJECT GRID (4 items per row on desktop) */
-        .project-grid {
+        /* LUXURY LAYOUT DESIGN FOR THE PROJECT GRID (2 items per row) */
+        .project-row {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
         }
         
         .project-card {
-            /* Sets up a precise 4-column layout on desktop viewports */
-            flex: 1 1 calc(25% - 15px); 
+            flex: 1 1 calc(50% - 10px); /* Sets up a perfect two-column split layout */
             box-sizing: border-box;
             background: rgba(2, 7, 19, 0.4);
             border: 1px solid rgba(0, 102, 255, 0.15);
@@ -25,25 +24,18 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Keeps labels uniformly aligned at the bottom */
+            justify-content: space-between; /* Keeps titles balanced at the bottom */
         }
         
         .project-card img {
             width: 100%;
-            height: auto; 
-            object-fit: contain; /* Guarantees the entire flyer displays in full without cropping */
+            height: auto; /* Allows the image to scale naturally without truncation */
+            object-fit: contain; /* FIX: Guarantees the entire flyer displays in full without cropping */
             border-radius: 6px;
             border: 1px solid #334155;
         }
 
-        /* MOBILE & TABLET RESPONSIVE OVERRIDES */
-        @media (max-width: 1024px) {
-            /* Drops down to 2 items per line on smaller screens/tablets */
-            .project-card {
-                flex: 1 1 calc(50% - 10px);
-            }
-        }
-
+        /* MOBILE-FIRST RESPONSIVE OVERRIDES */
         @media (max-width: 768px) {
             body {
                 padding: 20px !important; /* Removes massive outer block margins on phones */
@@ -80,9 +72,8 @@
                 padding: 20px 15px !important;
             }
             
-            /* Drops down to a clean 2 columns on mobile so images remain readable */
+            /* Keeps 2 items on a line on mobile but balances inner text cushioning */
             .project-card {
-                flex: 1 1 calc(50% - 10px);
                 padding: 10px;
             }
             
@@ -97,13 +88,6 @@
                 gap: 10px;
                 margin-top: 40px !important;
                 padding-top: 15px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* For exceptionally narrow phones, stacks to 1 column so details aren't micro-sized */
-            .project-card {
-                flex: 1 1 100%;
             }
         }
     </style>
@@ -128,7 +112,7 @@
                 
                 <h3 style="color: #4da3ff; border-bottom: 1px solid rgba(0, 102, 255, 0.3); padding-bottom: 5px; margin: 0 0 20px 0; font-size: 18px; letter-spacing: 1px;">FLYERS & POSTERS</h3>
                 
-                <div class="project-grid">
+                <div class="project-row">
                     <div class="project-card">
                         <img src="6a01e50e3befb72315bae69382ef31d1_2.jpeg" alt="Need A Website Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Web Services</p>
@@ -137,6 +121,9 @@
                         <img src="cc45920c803dc8a8706f6aaad1ffc089_2.jpeg" alt="NexusLaunch Hub Promotional Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">NexusLaunch Hub</p>
                     </div>
+                </div>
+                
+                <div class="project-row">
                     <div class="project-card">
                         <img src="7dd7c5773227b51757482fd1c073c3f6_1.jpeg" alt="Graphic Design Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Graphic Design</p>
@@ -147,9 +134,11 @@
                     </div>
                 </div>
 
+                <div style="height: 25px;"></div>
+
                 <h3 style="color: #4da3ff; border-bottom: 1px solid rgba(0, 102, 255, 0.3); padding-bottom: 5px; margin: 0 0 20px 0; font-size: 18px; letter-spacing: 1px;">BRAND & CORPORATE IDENTITY</h3>
                 
-                <div class="project-grid">
+                <div class="project-row">
                     <div class="project-card">
                         <img src="7db5a0fe296875ab210ce3af159b7386_2.jpeg" alt="Graphic Design Hub Flyer">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Brand Identity</p>
@@ -160,9 +149,11 @@
                     </div>
                 </div>
 
+                <div style="height: 25px;"></div>
+
                 <h3 style="color: #4da3ff; border-bottom: 1px solid rgba(0, 102, 255, 0.3); padding-bottom: 5px; margin: 0 0 20px 0; font-size: 18px; letter-spacing: 1px;">PRODUCT MENUS & CATALOGS</h3>
                 
-                <div class="project-grid">
+                <div class="project-row">
                     <div class="project-card">
                         <img src="8ed0739cf50223658fa4ceac14f831d7_1.jpeg" alt="Jollus Mart Catalog">
                         <p style="margin: 8px 0 0 0; font-size: 13px; color: #cbd5e1; font-weight: bold;">Product Menu</p>
