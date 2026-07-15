@@ -6,83 +6,185 @@
     <title>Mubarak Digital Solutions | Home</title>
     
     <style>
+        /* MODERN GLOBAL RESETS */
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        /* PREMIUM INTERACTIVE NAV */
+        .nav-link {
+            display: inline-block;
+            color: #a4b3d6;
+            text-decoration: none;
+            padding: 12px 24px;
+            margin: 0 8px;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+            border-color: rgba(0, 102, 255, 0.4);
+            background: rgba(0, 102, 255, 0.05);
+        }
+
+        .nav-link.active {
+            color: #ffffff;
+            background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%);
+            box-shadow: 0 8px 24px rgba(0, 102, 255, 0.4);
+        }
+
+        /* HERO ZONE ARCHITECTURE */
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            gap: 40px;
+            flex: 1;
+            padding: 20px 0;
+        }
+
+        /* LEFT SIDEBAR: GLASSMORPHIC CONTENT CARD */
+        .text-section {
+            flex: 1; /* Slightly adjusted to give the image more breathing room */
+            text-align: left;
+            background: rgba(10, 25, 49, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 50px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        /* RIGHT SIDEBAR: THE GIANT HERO IMAGE CONTAINER */
+        .image-section {
+            flex: 2; /* Increased flex from 1.8 to 2 so it takes up much more space on the screen */
+            display: flex;
+            justify-content: flex-end; /* Aligns the image to the far right edge like the reference */
+            align-items: flex-end; /* Snaps the image to the bottom */
+            height: 100%;
+            position: relative;
+        }
+
+        /* Futuristic glow behind your main photo */
+        .image-section::before {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.25) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+            right: -10%;
+            bottom: -10%;
+        }
+
+        .showcase-img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 85vh; /* Increased from 70vh to 85vh to make it significantly taller */
+            object-fit: contain; /* Ensures the portrait doesn't stretch or distort */
+            display: block;
+            z-index: 1;
+            filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
+            transform: scale(1.1); /* Scales it slightly beyond its bounds to mimic the edge crop of the reference image */
+            transform-origin: bottom right; /* Focuses the scale towards the bottom-right corner */
+        }
+
         /* MOBILE-FIRST RESPONSIVE OVERRIDES */
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             body {
-                padding: 20px !important; /* Give more edge space on mobile */
+                padding: 20px !important;
             }
             
-            /* Stack the nav links neatly so they don't overlap or look squished */
             .nav-container {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 10px;
-                margin-bottom: 30px !important;
+                gap: 8px;
+                margin-bottom: 40px !important;
             }
             
             .nav-link {
                 margin: 0 !important;
-                padding: 8px 12px !important;
+                padding: 8px 16px !important;
                 font-size: 12px !important;
             }
+
+            .content-wrapper {
+                flex-direction: column-reverse; /* Put the giant image FIRST on mobile viewing screens */
+                text-align: center;
+                gap: 40px;
+            }
+
+            .text-section {
+                text-align: center;
+                padding: 30px 20px;
+                width: 100%;
+            }
             
-            /* Shrink the massive text so it doesn't create giant blank spaces */
             .hero-subtitle {
                 font-size: 18px !important;
             }
             
             .hero-title {
-                font-size: 55px !important; /* Reduced from 110px for mobile balance */
+                font-size: 60px !important;
                 margin-bottom: 20px !important;
             }
             
-            /* Shrink the image so it fits narrow phone screens perfectly */
             .showcase-img {
-                width: 220px !important;
+                max-height: 50vh;
+                transform: scale(1); /* Reset zoom on mobile to prevent clipping issues */
             }
             
-            /* Stack the footer elements vertically instead of squishing them sideways */
             .footer-container {
                 flex-direction: column;
                 text-align: center;
-                gap: 15px;
+                gap: 20px;
                 margin-top: 40px !important;
             }
         }
     </style>
 </head>
-<body style="background: radial-gradient(circle, #0a1931 0%, #020713 100%); color: #ffffff; font-family: sans-serif; margin: 0; padding: 40px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+<body style="background: radial-gradient(circle at 80% 20%, #0c2349 0%, #020713 100%); color: #ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 40px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; overflow-x: hidden;">
 
-    <div>
-        <div class="nav-container" style="text-align: center; margin-bottom: 60px;">
-            <a href="index.html" class="nav-link" style="display: inline-block; color: #ffffff; background: #0066ff; text-decoration: none; padding: 10px 25px; margin: 0 12px; font-weight: bold; border-radius: 5px; box-shadow: 0 0 15px rgba(0, 102, 255, 0.6); font-size: 14px; letter-spacing: 0.5px;">HOME</a>
-            <a href="about.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 12px; font-weight: bold; font-size: 14px; letter-spacing: 0.5px;">ABOUT ME</a>
-            <a href="service.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 12px; font-weight: bold; font-size: 14px; letter-spacing: 0.5px;">SERVICES</a>
-            <a href="projects.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 12px; font-weight: bold; font-size: 14px; letter-spacing: 0.5px;">PROJECTS</a>
-            <a href="review.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 12px; font-weight: bold; font-size: 14px; letter-spacing: 0.5px;">REVIEWS</a>
-            <a href="contact.html" class="nav-link" style="display: inline-block; color: #a4b3d6; text-decoration: none; padding: 10px 20px; margin: 0 12px; font-weight: bold; font-size: 14px; letter-spacing: 0.5px;">CONTACT</a>
+    <div class="nav-container" style="text-align: center; margin-bottom: 30px;">
+        <a href="index.html" class="nav-link active">HOME</a>
+        <a href="about.html" class="nav-link">ABOUT ME</a>
+        <a href="service.html" class="nav-link">SERVICES</a>
+        <a href="projects.html" class="nav-link">PROJECTS</a>
+        <a href="review.html" class="nav-link">REVIEWS</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="text-section">
+            <p class="hero-subtitle" style="font-size: 20px; color: #38bdf8; margin: 0 0 15px 0; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;">Explore my creative design</p>
+            <h1 class="hero-title" style="font-size: 85px; color: #ffffff; margin: 0 0 25px 0; font-weight: 800; letter-spacing: -2px; line-height: 1.1;">Creative<br><span style="color: #90caf9; background: linear-gradient(135deg, #fff 30%, #90caf9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Portfolio</span></h1>
+            <p style="color: #94a3b8; font-size: 16px; line-height: 1.6; margin: 0; max-width: 450px;">Crafting next-generation digital interfaces and interactive brand identities that leave lasting impressions.</p>
         </div>
 
-        <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
-            <p class="hero-subtitle" style="font-size: 24px; color: #cbd5e1; margin: 0 0 10px 0; font-weight: normal; letter-spacing: 0.5px;">Explore my creative design</p>
-            
-            <h1 class="hero-title" style="font-size: 110px; color: #90caf9; margin: 0 0 40px 0; font-weight: bold; letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.4);">Portfolio</h1>
-            
-            <div style="display: inline-block; position: relative; margin-bottom: 40px;">
-                <div style="background: radial-gradient(circle, rgba(0,102,255,0.25) 0%, transparent 70%); padding: 30px; border-radius: 50%;">
-                    <img src="mubarak.png" alt="Mubarak Digital Solutions Showcase" class="showcase-img" width="360" style="display: block; border-radius: 50%; border: 3px solid #0066ff; box-shadow: 0 0 30px rgba(0,102,255,0.5); object-fit: cover; aspect-ratio: 1/1; max-width: 100%; height: auto;">
-                </div>
-            </div>
+        <div class="image-section">
+            <img src="mubarak.png" alt="Mubarak Digital Solutions Showcase" class="showcase-img">
         </div>
     </div>
 
-    <div class="footer-container" style="margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+    <div class="footer-container" style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
         <div>
-            <h3 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: bold; letter-spacing: 0.5px;">Mubarak Digital Solutions</h3>
+            <h3 style="margin: 0; color: #ffffff; font-size: 16px; font-weight: 700; letter-spacing: 0.5px;">Mubarak Digital Solutions</h3>
             <p style="margin: 5px 0 0 0; color: #64748b; font-size: 13px;">Smart Design for Brilliant Brands.</p>
         </div>
-        <div style="color: #94a3b8; font-size: 15px; font-weight: bold; letter-spacing: 0.5px;">@Mubarakadebayo</div>
+        <div style="color: #64748b; font-size: 14px; font-weight: 500; letter-spacing: 0.5px;">@Mubarakadebayo</div>
     </div>
 
 </body>
